@@ -10,35 +10,42 @@
     <header>
         <h1>Blog de Videojuegos</h1>
     </header>
-    <div id="sidebarMenu" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
-        <h2>Usuario_prueba</h2>
-        <h4>inicio</h4>
-        <h4>prueba</h4>
-        <nav>
-            <ul>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Video-Juegos</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Subopción 1.1</a></li>
-                    </ul>
-                </li>
-                ...
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Opción 7</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Subopción 7.1</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div id="mainContent">
-        <span style="font-size:30px;cursor:pointer" onclick="openSidebar()">&#9776;</span>
-        ...
-    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span>&#9776;</span>
+      </div>
+      <nav class="sidebar">
+        <div class="user-info">
+          <img src="tu_foto.jpg" alt="Foto de perfil" class="profile-picture">
+          <div class="account">
+            <h3>Mi cuenta</h3>
+            <small><a href="#">Registrarse</a> || <br> <a href="#">Iniciar sesión</a></small>
+          </div>
+        </div>
+        <hr>
+        <h2>Videojuegos</h2>
+        <ul class="menu">
+            <li>
+                <a href="#">Animal Crossing</a>
+            </li>
+            <li>
+                <a href="#">Minecraft</a>
+                <ul class="submenu">
+                    <li><a href="#">Análisis</a></li>
+                    <li><a href="#">Noticias</a></li>
+                    <!-- Repite para las subcategorías 2 a 7 -->
+                </ul>
+            </li>
+            <li>
+                <a href="#">Terraria</a>
+            </li>
+            <li>
+                <a href="#">The legend of Zelda Majora's Mask</a>
+            </li>
+        </ul>
+      </nav>
     
-    <nav>
+    <nav class="mainMenu">
         <a href="#">Inicio</a>
         <a href="#">Análisis</a>
         <a href="#">Noticias</a>
