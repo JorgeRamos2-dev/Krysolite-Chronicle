@@ -1,0 +1,19 @@
+.contact-section {
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+.contact-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-section ul li {
+    margin-bottom: 10px;
+}
