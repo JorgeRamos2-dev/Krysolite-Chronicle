@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Videojuegos</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contacto.css">
+ 
+</head>
+<body>
+    <header class="titulo">
+        <h1 >Blog de Videojuegos</h1>
+        <nav class="mainMenu">
+            <a href="Index.html">Inicio</a>
+            <a href="analisis.html">Análisis</a>
+            <a href="#">Noticias</a>
+            <a href="#contact-section">Contacto</a>
+        </nav>
+    </header>
+<main class="cuerpo">
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span>&#9776;</span>
+    </div>
+      <nav class="sidebar">
+        <div class="user-info">
+            <img src="tu_foto.jpg" alt="Foto de perfil" class="profile-picture">
+            <div class="account">
+              <h3>Mi cuenta</h3>
+              <small><a href="Register.html">Registrarse</a> || <br> <a href="Login.html">Iniciar sesión</a></small>
+            </div>
+          </div>
+          <hr>
+          <h2>Videojuegos</h2>
+          <ul class="menu">
+              <li>
+                  <a href="#">Animal Crossing</a>
+              </li>
+              <li>
+                  <a href="#">Minecraft</a>
+                  <ul class="submenu">
+                      <li><a href="#">Análisis</a></li>
+                      <li><a href="#">Noticias</a></li>
+                      <!-- Repite para las subcategorías 2 a 7 -->
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">Terraria</a>
+              </li>
+              <li>
+                  <a href="#">The legend of Zelda Majora's Mask</a>
+              </li>
+          </ul>
+      </nav>
+    
+        
+        <!-- Sección de contacto -->
+        <div class="contact-section" id="contact-section">
+            <h2>Contacto</h2>
+            <ul>
+                <li>Email: ejemplo@blogvideojuegos.com</li>
+                <li>Teléfono: +34 123 456 789</li>
+                <li>Facebook: <a href="https://www.facebook.com/blogvideojuegos" target="_blank">facebook.com/blogvideojuegos</a></li>
+                <li>Twitter: <a href="https://twitter.com/blogvideojuegos" target="_blank">@blogvideojuegos</a></li>
+                <li>Instagram: <a href="https://www.instagram.com/blogvideojuegos" target="_blank">instagram.com/blogvideojuegos</a></li>
+            </ul>
+        </div>
+    </div>
+    </main>
+    <footer>
+        &copy; 2023 Blog de Videojuegos. Todos los derechos reservados.
+    </footer>
+    <script type="text/javascript" src="scripts/sideBar.js"></script>
+</body>
+</html>
