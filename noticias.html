@@ -8,18 +8,18 @@
 </head>
 <body>
     <header class="titulo">
-        <h1 >Blog de Videojuegos</h1>
+        <h1>Blog de Videojuegos</h1>
         <nav class="mainMenu">
-            <a href="#">Inicio</a>
+            <a href="index.html">Inicio</a>
             <a href="analisis.html">Análisis</a>
-            <a href="noticias.html">Noticias</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="#">Noticias</a>
+            <a href="#">Contacto</a>
         </nav>
     </header>
-<main class="cuerpo">
+    <main class="cuerpo">
     <div class="menu-toggle" onclick="toggleMenu()">
         <span>&#9776;</span>
-    </div>
+      </div>
       <nav class="sidebar">
         <div class="user-info">
           <img src="tu_foto.jpg" alt="Foto de perfil" class="profile-picture">
@@ -51,29 +51,54 @@
         </ul>
       </nav>
     
-      <!-- Para poner post supongo xd-->
+
     <div id="main">
         <div id="posts">
             <article>
+                <h2>Análisis de "Videojuego 1"</h2>
+                <p class="post-meta"><i class="fas fa-user"></i> Autor 1 <i class="fas fa-calendar-alt"></i> 22/03/2023</p>
+                <p>Resumen y análisis del videojuego 1...</p>
+                <a href="#">Leer más</a>
+
                
+                <br><br>
             </article>
             
+            <article>
+                <h2>Análisis de "Videojuego 1"</h2>
+                <p class="post-meta"><i class="fas fa-user"></i> Autor 1 <i class="fas fa-calendar-alt"></i> 22/03/2023</p>
+                <p>Resumen y análisis del videojuego 1...</p>
+                <a href="#">Leer más</a>
+
+                <br><br>
+            </article>
+
+        </div>
+        <div>
+            <h3>Noticias recientes</h3>
+            <ul>
+                <li><a href="#">Lanzamiento de "Videojuego 1"</a></li>
+                <li><a href="#">Actualización importante para "Videojuego 2"</a></li>
+                <li><a href="#">Evento especial de "Videojuego 3"</a></li>
+                <li><a href="#">Nuevos contenidos en "Videojuego 4"</a></li>
+            </ul>
+            <h3>Noticias destacadas</h3>
+            <ul>
+                <li><a href="#">Entrevista exclusiva con el creador de "Videojuego 1"</a></li>
+                <li><a href="#">Análisis detallado de "Videojuego 2"</a></li>
+                <li><a href="#">10 consejos para mejorar en "Videojuego 3"</a></li>
+                <li><a href="#">Historia y evolución de "Videojuego 4"</a></li>
+            </ul>
         </div>
         
     </div>
-    </main>
-    <footer>
+</main>
+    <footer >
         &copy; 2023 Blog de Videojuegos. Todos los derechos reservados.
     </footer>
     <script type="text/javascript" src="scripts/sideBar.js"></script>
 </body>
 </html>
-
-
-
-
-
-
 
 
 
