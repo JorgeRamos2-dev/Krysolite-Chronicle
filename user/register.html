@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>frontend_proyect</title>
+    <title>Registrate | Krysolite</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css?h=477c546b13e768bede0c5e2b778c78b5">
     <link rel="stylesheet" href="../assets/css/ABeeZee.css?h=eec396084f1860dc522a5e0443a8dcbe">
     <link rel="stylesheet" href="../assets/css/Abril%20Fatface.css?h=261b8065b138cac5224209874d5f6e79">
@@ -49,22 +49,28 @@
                                 <p class="text-muted mt-2 mb-5">Por favor, ingresa los datos para poder registrarte</p>
 
                                 <form>
-                                     <div class="form-group">
-                                        <label for="exampleInputUsername">Nombre de Usuario</label>
-                                        <input type="text" class="form-control" id="exampleInputUsername">
-                                    </div>
-                                    <br>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Correo Electronico</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1">
-                                    </div>
-                                    <div class="form-group mb-5">
-                                        <br>
-                                        <label for="exampleInputPassword1">Contraseña</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <button type="submit" class="btn btn-theme">Registrarte</button>
-                                </form>
+                                       <label for="inputUsername">Nombre de Usuario</label>
+                                       <input type="text" class="form-control" id="inputUsername">
+                                   </div>
+                                   <br>
+                                   <div class="form-group">
+                                       <label for="inputEmail">Correo Electronico</label>
+                                       <input type="email" class="form-control" id="inputEmail">
+                                   </div>
+                                   <div class="form-group">
+                                       <br>
+                                       <label for="inputPassword">Contraseña</label>
+                                       <input type="password" class="form-control" id="inputPassword">
+                                   </div>
+                                   <div class="form-group mb-5">
+                                       <br>
+                                       <label for="inputPasswordConfirm">Confirmar Contraseña</label>
+                                       <input type="password" class="form-control" id="inputPasswordConfirm">
+                                   </div>
+                                   <label class="mb-5" id="showWarning" style="display: none; color: red;"></label>
+                                   <button type="button" id="btnSubmit" class="btn btn-theme">Registrarte</button>
+                               </form>
                             </div>
                         </div>
 
@@ -96,6 +102,7 @@
     <script src="../assets/js/bs-init.js?h=7563c52cc0a72a92d96ce0159b71241c"></script>
     <script src="../assets/js/clean-blog.js?h=44b1c6e85af97fda0fedbb834b3ff3f8"></script>
     <script src="../assets/js/Slider_Carousel_webalgustocom.js?h=fc036aade6278542253b043dd0af9a44"></script>
+    <script src="../assets/js/register.js"></script>
 </body>
 
 </html>
