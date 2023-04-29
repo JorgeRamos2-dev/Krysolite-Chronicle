@@ -3,6 +3,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; chatset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
@@ -20,11 +21,21 @@ $db = $database->getConnection();
 $item = new Users($db);
 
 
-$item->setId($_POST['id']);
-$item->setUserData();
+session_start();
 
-if(!empty($_POST['name'])){
-	$item->setName($_POST['name']);
+if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
+	header('Location: /');
+}
+
+
+$item->setUsername($_SESSION['username']);
+$data = $item->getUserByUsername();
+
+$item->setId($data['id']);
+
+
+if(!empty($_POST['username'])){
+	$item->setUsername($_POST['username']);
 }
 
 if(!empty($_POST['email'])){
@@ -39,8 +50,20 @@ if(!empty($_POST['picture'])){
 	$item->setPicture($_POST['picture']);
 }
 
+if(!empty($_POST['firstname'])){
+	$item->setFirstname($_POST['firstname']);
+}
+
+if(!empty($_POST['lastname'])){
+	$item->setLastname($_POST['lastname']);
+}
+
+
+
 if($item->updateUser()){
-	echo json_encode('Usuario actualizado con exito');
+	echo json_encode(array('state'=>'success'));
+	return true;
 }else{
-	echo json_encode('Error al actualizar');
+	echo json_encode(array('state'=>'fail'));
+	return false;
 }

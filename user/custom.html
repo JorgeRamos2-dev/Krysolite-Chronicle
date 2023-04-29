@@ -48,26 +48,25 @@
                     </div>
                     <div class="row" style="margin-bottom: 25px;text-align: left;">
                         <div class="col-md-6">
-                            <div class="mb-3"><label class="form-label" for="first_name"><strong>Nombre</strong><br></label><input class="form-control" type="text" placeholder="John" name="first_name" required=""></div>
+                            <div class="mb-3"><label class="form-label" for="first_name"><strong>Nombre</strong><br></label><input id="firstname" class="form-control" type="text" placeholder="John" name="first_name" required=""></div>
                         </div>
                         <div class="col-md-6">
-                            <div class="mb-3"><label class="form-label" for="last_name"><strong>Apellido</strong><br></label><input class="form-control" type="text" placeholder="Doe" name="last_name" required=""></div>
+                            <div class="mb-3"><label class="form-label" for="last_name"><strong>Apellido</strong><br></label><input id="lastname" class="form-control" type="text" placeholder="Doe" name="last_name" required=""></div>
                         </div>
                         <div class="col-md-6">
-                            <div class="mb-3"><label class="form-label" for="username"><strong>Nombre De Usuario</strong><br></label><input class="form-control" type="text" placeholder="Username" name="username" required=""></div>
+                            <div class="mb-3"><label class="form-label" for="username"><strong>Nombre De Usuario</strong><br></label><input id="username" class="form-control" type="text" placeholder="Username" name="username" required=""></div>
                         </div>
                         <div class="col-md-6">
-                            <div class="mb-3"><label class="form-label d-flex flex-wrap" for="email"><strong>Correo&nbsp; Electrónico</strong></label><input class="form-control" type="email" id="email" placeholder="user@example.com" name="email" required=""></div>
+                            <div class="mb-3"><label class="form-label d-flex flex-wrap" for="email"><strong>Correo&nbsp; Electrónico</strong></label><input id="email" class="form-control" type="email" id="email" placeholder="user@example.com" name="email" required=""></div>
                         </div>
                         <div class="col-md-6 text-start justify-content-center align-items-baseline align-content-around">
-                            <div class="mb-3"><label class="form-label d-flex flex-wrap" for="username"><strong>Contraseña&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></label><input class="form-control d-flex justify-content-center align-items-center align-content-center" type="password" id="password" placeholder="Password"></div>
+                            <div class="mb-3"><label class="form-label d-flex flex-wrap" for="username"><strong>Contraseña&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></label><input id="password" class="form-control d-flex justify-content-center align-items-center align-content-center" type="password" id="password" placeholder="Password"></div>
                         </div>
                         <div class="col-md-6 text-start">
-                            <div class="mb-3"><label class="form-label" for="username"><strong>Confirmar Contraseña</strong></label><input class="form-control" type="password" id="verifyPassword" placeholder="Password"></div>
+                            <div class="mb-3"><label class="form-label" for="username"><strong>Confirmar Contraseña</strong></label><input id="password2" class="form-control" type="password" id="verifyPassword" placeholder="Password"></div>
                         </div><!-- Start: Error Messages -->
                         <div class="col">
-                            <p id="emailErrorMsg" class="text-danger" style="display:none;"></p>
-                            <p id="passwordErrorMsg" class="text-danger" style="display:none;"></p>
+                            <p id="errorMsg" class="text-danger" style="display:none;"></p>
                         </div><!-- End: Error Messages -->
                         </div>
                         <div class="col-md-6 d-flex d-sm-flex d-md-flex justify-content-center align-items-center align-content-center align-self-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center" style="text-align: right;margin: auto;margin-top: 5px;"><button id="submitBtn" class="btn btn-primary btn-sm" type="button" style="width: 210px;margin: auto;margin-top: 0;">Guardar cambios</button></div>
