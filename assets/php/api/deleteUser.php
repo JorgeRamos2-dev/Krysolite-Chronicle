@@ -16,13 +16,27 @@ $database = new Database();
 $db = $database->getConnection();
 
 
+session_start();
+
+if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
+	header('Location: /');
+}
+
+
 //Declaramos el objeto de tipo Tarea
 $item = new Users($db);
 
-$item->setId($_POST['id']);
+$item->setUsername($_SESSION['username']);
+$data = $item->getUserByUsername();
+
+$item->setId($data['id']);
+
+
 
 if($item->deleteUser()){
-	echo json_encode('Usuario eliminado con exito');
+	session_unset();
+	session_destroy();
+	echo json_encode(array('state'=>'success'));
 }else{
-	echo json_encode('Error al eliminar');
+	echo json_encode(array('state'=>'fail'));
 }

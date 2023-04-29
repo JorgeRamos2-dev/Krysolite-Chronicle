@@ -18,7 +18,7 @@ $db = $database->getConnection();
 //Declaramos el objeto de tipo Users
 $item = new Users($db);
 
-$item->setName($_POST['username']);
+$item->setUsername($_POST['username']);
 $item->setEmail($_POST['email']);
 $item->setPassword(password_hash(htmlspecialchars(strip_tags($_POST['password'])), PASSWORD_DEFAULT));
 
