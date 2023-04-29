@@ -36,10 +36,12 @@ $item->setId($data['id']);
 
 if(!empty($_POST['username'])){
 	$item->setUsername($_POST['username']);
+	$_SESSION['username'] = $_POST['username'];
 }
 
 if(!empty($_POST['email'])){
 	$item->setEmail($_POST['email']);
+	$_SESSION['email'] = $_POST['email'];
 }
 
 if(!empty($_POST['password'])){
