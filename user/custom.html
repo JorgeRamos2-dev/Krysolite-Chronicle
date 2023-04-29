@@ -44,7 +44,7 @@
                 <!-- Start: Form -->
                 <form>
                     <div class="row" style="margin-bottom: 56px;height: 280px;min-height: auto;">
-                        <div class="col order-first" style="display: inline;text-align: center;margin-right: auto;margin-left: auto;"><img class="rounded img-fluid mb-3 mt-4 img-fluid" src="../assets/img/default.png?h=b4d17eebf529c2e4b8eaeb4dbcb330bf" style="display: inline;max-height: none;width: 205px;height: 195px;"><br><button class="btn btn-primary btn-sm" id="photoBtn" type="button" style="width: 188.891px;">Change Photo</button></div>
+                        <div class="col order-first" style="display: inline;text-align: center;margin-right: auto;margin-left: auto;"><img class="rounded img-fluid mb-3 mt-4 img-fluid" src="../assets/img/profile/default.png" style="display: inline;max-height: none;width: 205px;height: 195px;"><br><button class="btn btn-primary btn-sm" id="photoBtn" type="button" style="width: 188.891px;">Change Photo</button></div>
                     </div>
                     <div class="row" style="margin-bottom: 25px;text-align: left;">
                         <div class="col-md-6">
@@ -64,13 +64,19 @@
                         </div>
                         <div class="col-md-6 text-start">
                             <div class="mb-3"><label class="form-label" for="username"><strong>Confirmar Contraseña</strong></label><input class="form-control" type="password" id="verifyPassword" placeholder="Password"></div>
+                        
+                            <div class="col-md-6 d-flex d-print-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex align-content-center align-self-center justify-content-xxl-center align-items-xxl-center" style="text-align: right;margin: auto;margin-top: 5px;"><button id="submitBtn-1" class="btn btn-sm" type="button" style="width: 210px;--bs-success: #198754;--bs-success-rgb: 25,135,84;background: #e81111;color: rgb(255,255,255);margin: auto;">Borrar cuenta</button></div>
+                            <div class="col-md-6 d-flex d-sm-flex d-md-flex justify-content-center align-items-center align-content-center align-self-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center" style="text-align: right;margin: auto;margin-top: 5px;"><button id="submitBtn" class="btn btn-primary btn-sm" type="button" style="width: 210px;margin: auto;margin-top: 0;">Guardar cambios</button></div>
+                            <div class="col-md-12 d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center" style="text-align: right;margin: auto;"><button id="submitBtn-2" class="btn btn-lg" type="button" style="margin: auto;margin-top: 10px;background: #00030b;color: rgb(255,255,255);">Cerrar sesión</button></div>
+                            
+
+
                         </div><!-- Start: Error Messages -->
                         <div class="col">
                             <p id="emailErrorMsg" class="text-danger" style="display:none;"></p>
                             <p id="passwordErrorMsg" class="text-danger" style="display:none;"></p>
                         </div><!-- End: Error Messages -->
-                        <div class="col-md-12" style="text-align: right;margin-top: 5px;"><button class="btn btn-primary btn-sm" id="submitBtn" type="submit">Guardar cambios</button></div>
-                    </div>
+                        </div>
                 </form><!-- End: Form -->
             </div>
         </div>
