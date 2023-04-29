@@ -18,8 +18,23 @@ $db = $database->getConnection();
 //Declaramos el objeto de tipo Users
 $item = new Users($db);
 
+
+
 $item->setUsername($_POST['username']);
+if($item->getUserByUsername()){
+	echo json_encode(array('state'=>'fail','reason'=>'El nombre de usuario ya esta registado'));
+	return false;
+}
+
 $item->setEmail($_POST['email']);
+if($item->getUserByEmail()){
+	echo json_encode(array('state'=>'fail','reason'=>'El correo ya esta registado'));
+	return false;
+}
+
+
+
+
 $item->setPassword(password_hash(htmlspecialchars(strip_tags($_POST['password'])), PASSWORD_DEFAULT));
 
 if($item->insertUser()){
@@ -30,5 +45,5 @@ if($item->insertUser()){
 	$_SESSION['email'] = $_POST['email'];
 
 }else{
-	echo json_encode('Error al agregar usuario');
+	echo json_encode(array('state'=>'fail', 'reason'=>'Ha ocurrido un error, intentelo mas tarde'));
 }

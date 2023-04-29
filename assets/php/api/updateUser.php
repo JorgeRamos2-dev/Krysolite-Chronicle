@@ -29,18 +29,29 @@ if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
 
 
 $item->setUsername($_SESSION['username']);
-$data = $item->getUserByUsername();
-
-$item->setId($data['id']);
+$item->setUserData();
 
 
-if(!empty($_POST['username'])){
+if(!empty($_POST['username']) && $_SESSION['username'] != $_POST['username']){
+
 	$item->setUsername($_POST['username']);
+	if($item->getUserByUsername()){
+		echo json_encode(array('state'=>'fail','reason'=>'El nombre de usuario ya esta registado'));
+		return false;
+	}
+
+
 	$_SESSION['username'] = $_POST['username'];
 }
 
-if(!empty($_POST['email'])){
+if(!empty($_POST['email']) && $_SESSION['email'] != $_POST['email']){
+
 	$item->setEmail($_POST['email']);
+	if($item->getUserByEmail()){
+		echo json_encode(array('state'=>'fail','reason'=>'El correo ya esta registado'));
+		return false;
+	}
+
 	$_SESSION['email'] = $_POST['email'];
 }
 

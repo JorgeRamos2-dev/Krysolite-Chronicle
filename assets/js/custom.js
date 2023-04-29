@@ -102,6 +102,10 @@ $(document).ready(function(){
             success: function(data){
                 if(data.state == 'success'){
                     location.reload();
+                }else{
+                    warning.css('display', 'block');
+                    warning.text(data.reason);
+                    return false;
                 }
             }
         });

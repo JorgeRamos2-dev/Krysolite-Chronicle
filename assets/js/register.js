@@ -63,8 +63,14 @@ $(document).ready(function(){
             dataType: 'json',
             
             success: function(data){
-                console.log('Usuario creado');
-                $(location).attr('href', '/');
+                if(data.state == 'fail'){
+                    warning.css('display', 'block');
+                    warning.text(data.reason);
+                }else{
+                    console.log('Usuario creado');
+                    $(location).attr('href', '/');
+                }
+                
             }
         });
 
